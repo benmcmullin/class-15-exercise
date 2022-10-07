@@ -1,14 +1,22 @@
-<input
-type="text"
-class="form-control"
-placeholder ="Type here to search!">
-<br>
-<button
-type="button"
-class="btn btn"
-style="padding: 30px; margin-top: 20px;"
->
-Search</button>
+<body>
+  <div class="container my-5">
+    <p>Welcome, {{ name }}</p>
+  </div>
+<div class="row">
+  <div class="col-xs-12"></div>
 
+    <input
+    type="text"
+    class="form-control"
+    placeholder ="Type here to search!"
+    [(ngModel)]="name">
+    <br>
+    <button
+    type="button"
+    class="btn btn"
+    style="padding: 30px; margin-top: 20px;"
+    >
 
-
+    Search</button>
+</div>
+</body>
