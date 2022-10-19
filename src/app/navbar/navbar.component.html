@@ -3,20 +3,30 @@
     <p>Welcome, {{ name }}</p>
   </div>
 <div class="row">
-  <div class="col-xs-12"></div>
+  <div class="col-xs-12">
+
 
     <input
     type="text"
     class="form-control"
     placeholder ="Type here to search!"
-    [(ngModel)]="name">
+    [(ngModel)]="name"
+    value="name">
     <br>
     <button
     type="button"
-    class="btn btn"
+    class="btn btn-dark"
     style="padding: 30px; margin-top: 20px;"
+    (click)="currentSearch()"
     >
 
     Search</button>
+  </div>
+
+</div>
+<div *ngFor ="let newSearch of search; let i=index">
+  <p appRandomBGColorDirective>
+    {{ search[i]}}
+  </p>
 </div>
 </body>
